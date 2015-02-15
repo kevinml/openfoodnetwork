@@ -47,6 +47,13 @@ module Spree
   end
 end
 
+Rails.application.config.spree.calculators.enterprise_fees = [Spree::Calculator::FlatPercentItemTotal,
+                                                              Spree::Calculator::FlatRate,
+                                                              Spree::Calculator::FlexiRate,
+                                                              Spree::Calculator::PerItem,
+                                                              Spree::Calculator::PriceSack,
+                                                              OpenFoodNetwork::Calculator::Weight]
+
 # Forcing spree to always allow SSL connections
 # Since we are using config.force_ssl = true
 # Without this we get a redirect loop: see https://groups.google.com/forum/#!topic/spree-user/NwpqGxJ4klk

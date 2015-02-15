@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  force_ssl if: :ssl_configured?
 
   include EnterprisesHelper
 
@@ -14,6 +15,10 @@ class ApplicationController < ActionController::Base
     else
       root_path
     end
+  end
+
+  def ssl_configured?
+    !Rails.env.development?
   end
 
 
