@@ -22,7 +22,7 @@ Spree.config do |config|
     config.default_country_id = country.id if country.present?
   end
 
-  config.admin_interface_logo = "RE-long.jpg"
+  config.admin_interface_logo = "RE-square.jpg"
 
   # -- spree_paypal_express
   # Auto-capture payments. Without this option, payments must be manually captured in the paypal interface.
