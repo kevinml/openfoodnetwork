@@ -1043,9 +1043,6 @@ ActiveRecord::Schema.define(:version => 20141219034321) do
 
   add_index "variant_overrides", ["variant_id", "hub_id"], :name => "index_variant_overrides_on_variant_id_and_hub_id"
 
-  add_foreign_key "adjustment_metadata", "enterprises", name: "adjustment_metadata_enterprise_id_fk"
-  add_foreign_key "adjustment_metadata", "spree_adjustments", name: "adjustment_metadata_adjustment_id_fk", column: "adjustment_id"
-
   add_foreign_key "carts", "spree_users", name: "carts_user_id_fk", column: "user_id"
 
   add_foreign_key "cms_blocks", "cms_pages", name: "cms_blocks_page_id_fk", column: "page_id"
